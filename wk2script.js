@@ -62,7 +62,7 @@ jQuery.data( input, "", "" );
 jQuery.removeData( input, "" );
 
 
-
+//The following are options explored to try to improve the assignment and where I found the resources 
 //remove data
 //http://www.w3schools.com/jsref/jsref_splice.asp example
 // var fruits = ["Banana", "Orange", "Apple", "Mango"];
