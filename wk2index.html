@@ -2,19 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="https://code.jquery.com/jquery-1.10.2.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
     <script src="wk2script.js" charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="wk2stylesheet.css">
     <title>Concepts Revisited</title>
   </head>
   <body>
-    <h2> The Wonderful World of Movies!</h2>
-   <inpput type = "text" id = "search" placeholder="Search"></input>
-   <input type = "text" id = "year" placeholder="Year"></input>
-   <input type = "text" id = "title" placeholder="Title"></input>
-   <input type = "text" id = "posterURL" placeholder="Poster URL"></input>
-   <img src = "http://img.omdbapi.com/?apikey=[yourkey]&" alt = "Poster image">
-   <button id = "searchHere">Search</button>
-   <div id = "outputDiv"</div>
+    <h1> The Wonderful World of Movies!</h1>
+    <input type="text" id="searchIn" value="" placeholder="Search Name">
+    <button id= "searchNow">Search OMDB</button>
+    <button id= "clearSearch">Clear Search</button>
+     <div id='outputDiv'></div>
+
   </body>
 </html>

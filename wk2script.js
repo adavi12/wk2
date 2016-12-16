@@ -1,3 +1,48 @@
+<<<<<<< HEAD
+console.log( 'JS sourced' );
+
+$( document ).ready(function(){
+  console.log("JQ");
+
+  $("#searchNow").on ('click', function(){
+    console.log("Search");
+    var searchTitle = $( '#searchIn' ).val();
+    console.log( 'searching :', $( '#searchNow' ).val() );
+    var searchUrl = 'http://www.omdbapi.com/?s=' + searchTitle;
+    console.log( 'url:', searchUrl );
+    $.ajax({
+      type: "GET",
+      url: searchUrl,
+      dataType: 'JSON',
+      success: function( data){
+        console.log( 'API hit:', data );
+        showResult( data.Search );
+      },
+      statusCode: {
+        404: function(){
+          alert( 'Not found' );
+        }
+      }
+    }); // end ajax
+  }); // end searchIn
+
+  $("#clearSearch").on('click',function(){
+    console.log("Clear");
+    showResult([]);
+  });
+}); // end doc ready
+
+var showResult = function( result ){
+  console.log( 'showResult', result );
+
+  $( '#outputDiv').empty();
+  for( var i = 0 ; i < result.length; i++ ){
+    $( '#outputDiv').append( '<p>' + result[ i ].Title + '' + result[ i ].Year + '' + '</p>');
+    $( '#outputDiv').append( '<img src="' + result[ i ].Poster + '">' );
+    $( '#outputDiv').append( '<button class = "removeMovie">Remove Movie</button>');
+  }
+};
+=======
 console.log('JS');
 console.log('JQ');
 
@@ -82,3 +127,4 @@ jQuery.removeData( input, "" );
 //     });
 //
 // });
+>>>>>>> dc846f7e746f6d2b9397a04fe56cf01f3afb3824
